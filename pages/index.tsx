@@ -1,124 +1,267 @@
-import Image from 'next/image'
 import { Inter } from 'next/font/google'
+import NavBar from '@/components/navbar'
+import { Carousel } from "react-bootstrap";
+import Image from 'next/image'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">pages/index.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main>
+      <section className="section-1">
+        <NavBar />
+        <div className="section_heading-wrap">
+          <h2 className="section-heading">Let's build something together</h2>
+          <p className="section-para">
+            Hi, my name is Alexander, I'm a Software engineer currently living
+            in Lagos, Nigeria and I enjoy building everything from small
+            business websites to rich interactive web apps. If you have a
+            business seeking a web presence or an employer looking to hire, you
+            can get in touch with me here.
+          </p>
+          <div>
+            <button className="button-1">Download CV</button>
+            <button className="button-2">Hire me</button>
+          </div>
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      </section>
+      <section className="section-2" id='Services'>
+        <h2 className="section-heading--primary text-shade">Services</h2>
+        <div className="service_section-wrap">
+          <div className="service_secion-cards">
+            <div className="serviceimgwrap">
+              <Image src="/../public/develop_icon.png" alt="icon" className="img-fluid servicecard-img" width={50} height={50} />
+            </div>
+            <h6>WEB DEVELOPMENT</h6>
+            <p>
+              Clean, modern designs- optimized for performance, search engines
+              and converting users to customers
+            </p>
+          </div>
+          <div className="service_secion-cards">
+            <div className="serviceimgwrap">
+              <Image
+                src="/../public/analytics_ico.png"
+                alt="icon"
+                className=" servicecard-img"
+                width={50} height={50}
+              />
+            </div>
+            <h6> ANALYTICS</h6>
+            <p>
+              Get insight to see who is browsing your site so that you can make
+              smarter decisons
+            </p>
+          </div>
+          <div className="service_secion-cards">
+            <div className="serviceimgwrap">
+              <Image src="/../public/auddit_icon.png" alt="icon" className="servicecard-img" width={50} height={50} />
+            </div>
+            <h6>WEBSITE AUDIT</h6>
+            <p>
+              Looking to improve your page performance, SEO or user experience?
+              Request a free site audit.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className="section-3" id='Projects'>
+        <h2 className="section-heading--primary project-shade">Projects</h2>
+        <div className="projectsection-wrap">
+          <div className="projectsection-col1">
+            <a href='/'>
+              <Image
+                src="/../public/yudimy_webshot.png"
+                alt="yudimy_website"
+                className="img-fluid project_placeholder"
+                width={1000}
+                height={1400}
+              />
+            </a>
+          </div>
+          <div className="projectsection-col2">
+            <p>Featured Project</p>
+            <h5>Yudimy</h5>
+            <div className="project-description">
+              Yudimy is a Behavioural profiling algorithm that blends psychology
+              and machine learning to help people and organisations make
+              intuitive decisions backed by data.
+            </div>
+            <div>React | Typescript | Javascript</div>
+            <div className="projmedia_wrap">
+              <Image src="/../public/github.png" alt="github" className="img-fluid media_icon" width={4} height={4} />
+              <Image
+                src="/../public/external.png"
+                alt="external link"
+                className="img-fluid media_icon"
+                width={4}
+                height={4}
+              />
+            </div>
+          </div>
+        </div>
+        <div className="projectsection-wrap">
+          <div className="projectsection-col2 second_proj">
+            <p>Featured Project</p>
+            <h5>MolecularPro</h5>
+            <div className="project-description">
+              MolecularPro is a Technology driven work-force management solution
+              for technical specialists in Africa's natural gas industry.
+            </div>
+            <div>React | Typescript | Javascript</div>
+            <div className="projmedia_wrap secondmediawrap">
+              <Image src="/../public/github.png" alt="github" className="img-fluid media_icon" width={4} height={4} />
+              <Image
+                src="/../public/external.png"
+                alt="external link"
+                className="img-fluid media_icon"
+                width={800}
+                height={1800}
+              />
+            </div>
+          </div>
+          <div className="projectsection-col1 ">
+            <a href='/'>
+              <Image
+                src="/../public/molecular.png"
+                alt="molecular_website"
+                className="img-fluid altplaceholder"
+                width={1000}
+                height={1400}
+              />
+            </a>
+          </div>
+        </div>
+        <div className="projectsection-wrap thirdproj_wrap">
+          <div className="projectsection-col1">
+            <a href='/'>
+              <Image
+                src="/../public/country_app.png"
+                alt="country_website"
+                className="img-fluid project_placeholder"
+                width={1000}
+                height={1000}
+              />
+            </a>
+          </div>
+          <div className="projectsection-col2">
+            <p>Featured Project</p>
+            <h5>Search country App</h5>
+            <div className="project-description">
+              An application built with Angular, that fetches all the countries
+              in the world and gives detailed information about each them.
+            </div>
+            <div> Angular | Typescript | Javascript</div>
+            <div className="projmedia_wrap">
+              <Image src="/../public/github.png" alt="github" className="img-fluid media_icon" width={4} height={4} />
+              <Image
+                src="/../public/external.png"
+                alt="external link"
+                className="img-fluid media_icon"
+                width={4}
+                height={4}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="section-4" id='Contact'>
+        <div className="section-4_wraper">
+          <div className="section-4_col1">
+            <h4>Get In Touch</h4>
+            <p>
+              My inbox is always open. Whether you have a question or just want
+              to create your next idea together!
+            </p>
+          </div>
+          <div className="section-4_col2">
+            <button className="button-3">Say Hello</button>
+          </div>
+        </div>
+      </section>
+      <section className="section-5" id='Testimonials'>
+        <h3 className="feedback_heading img-shade">
+          What client <br /> Feed back about me
+        </h3>
+        <Carousel>
+          <Carousel.Item>
+            <div className="feedback_wraper">
+              <div className="feedbackimg-wrap">
+                <Image
+                  src="/../public/chris.png"
+                  alt="chris picture"
+                  className="img-fluid feedbackimg"
+                  width={300}
+                  height={300}
+                />
+              </div>
+              <div className="feedback_content">
+                <p className="feedbckpara">
+                  Alex was able to effectively collaborate with our team and
+                  adapt to changes in the project scope, ensuring that the
+                  project was delivered on time and within budget. I would
+                  highly recommend Him for any frontend development projects
+                  that require a strong attention to detail and excellent
+                  collaboration skills.
+                </p>
+                <p className="feedbckcmter">
+                  ~Christopher Abiodun, Tech solutions provider
+                </p>
+              </div>
+            </div>
+          </Carousel.Item>
+          <Carousel.Item>
+            <div className="feedback_wraper">
+              <div className="feedbackimg-wrap">
+                <Image
+                  src="/../public/zino.jfif"
+                  alt="zino picture"
+                  className="img-fluid feedbackimg"
+                  width={300}
+                  height={300}
+                />
+              </div>
+              <div className="feedback_content">
+                <p className="feedbckpara">
+                  Alex has an exceptional eye for detail and was able to deliver
+                  a pixel-perfect design that met all of our requirements. I
+                  would highly recommend Alex for any frontend development
+                  projects that require a strong attention to detail and
+                  excellent collaboration skills
+                </p>
+                <p className="feedbckcmter">~Omozino Eguh, CEO Yudimy</p>
+              </div>
+            </div>
+          </Carousel.Item>
+          <Carousel.Item>
+            <div className="feedback_wraper">
+              <div className="feedbackimg-wrap">
+                <Image
+                  src="/../public/chinedu.jpg"
+                  alt="zino picture"
+                  className="img-fluid feedbackimg"
+                  width={300}
+                  height={300}
+                />
+              </div>
+              <div className="feedback_content">
+                <p className="feedbckpara">
+                  Working with Alex was an absolute pleasure. He was able to
+                  understand our requirements and deliver a beautiful,
+                  user-friendly website that exceeded our expectations. He has a
+                  deep understanding of frontend development and was able to
+                  suggest creative solutions to any issues that arose during the
+                  project.
+                </p>
+                <p className="feedbckcmter">
+                  ~Chinedu Onuoha, Executive Director Pacepharmarcare LTD.
+                </p>
+              </div>
+            </div>
+          </Carousel.Item>
+        </Carousel>
+        <div className="img-shade2"></div>
+      </section>
     </main>
   )
 }
