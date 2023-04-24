@@ -69,7 +69,7 @@ export default function Home() {
         <h2 className="section-heading--primary project-shade">Projects</h2>
         <div className="projectsection-wrap">
           <div className="projectsection-col1">
-            <a href='/'>
+            <a href='/' className='project_imagewraper'>
               <Image
                 src="/../public/yudimy_webshot.png"
                 alt="yudimy_website"
