@@ -4,6 +4,7 @@ import styles from '../styles/navBar.module.css';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { useScrollDirection } from "./useScrollDirection";
+import logo from '../public/navlogo.png'
 
 
 function NavBar() {
@@ -39,7 +40,7 @@ function NavBar() {
         <nav >
           <div className={styles.Nav_logowrap}>
             <div className={styles.Nav_logoimg}>
-              <Image src="/../public/navlogo.png" alt="lOGO" width={38} height={38} />
+              <Image src={logo} alt="lOGO" width={38} height={38} />
             </div>
             <div className={styles.Nav_logotext}>
               <h6>ALEXANDER ASHIMEDUA</h6>
