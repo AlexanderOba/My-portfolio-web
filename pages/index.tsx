@@ -12,9 +12,9 @@ export default function Home() {
        <NavBar />
       <section className="section-1">
         <div className="section_heading-wrap">
-          <h2 className="section-heading">Let's build something together</h2>
+          <h2 className="section-heading">Let&apos;s build something together</h2>
           <p className="section-para">
-            Hi, my name is Alexander, I'm a Software engineer currently living
+            Hi, my name is Alexander, I&#39;m a Software engineer currently living
             in Lagos, Nigeria and I enjoy building everything from small
             business websites to rich interactive web apps. If you have a
             business seeking a web presence or an employer looking to hire, you
@@ -107,7 +107,7 @@ export default function Home() {
             <h5>MolecularPro</h5>
             <div className="project-description">
               MolecularPro is a Technology driven work-force management solution
-              for technical specialists in Africa's natural gas industry.
+              for technical specialists in Africa&apos;s natural gas industry.
             </div>
             <div>React | Typescript | Javascript</div>
             <div className="projmedia_wrap secondmediawrap">
