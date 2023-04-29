@@ -2,14 +2,15 @@ import { Inter } from 'next/font/google'
 import NavBar from '@/components/navbar'
 import { Carousel } from "react-bootstrap";
 import Image from 'next/image'
+import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
     <main>
+       <NavBar />
       <section className="section-1">
-        <NavBar />
         <div className="section_heading-wrap">
           <h2 className="section-heading">Let's build something together</h2>
           <p className="section-para">
@@ -69,7 +70,7 @@ export default function Home() {
         <h2 className="section-heading--primary project-shade">Projects</h2>
         <div className="projectsection-wrap">
           <div className="projectsection-col1">
-            <a href='/' className='project_imagewraper'>
+            <Link href='/' className='project_imagewraper'>
               <Image
                 src="/../public/yudimy_webshot.png"
                 alt="yudimy_website"
@@ -77,7 +78,7 @@ export default function Home() {
                 width={1000}
                 height={1400}
               />
-            </a>
+            </Link>
           </div>
           <div className="projectsection-col2">
             <p>Featured Project</p>
@@ -121,7 +122,7 @@ export default function Home() {
             </div>
           </div>
           <div className="projectsection-col1 ">
-            <a href='/'>
+            <Link href='/'>
               <Image
                 src="/../public/molecular.png"
                 alt="molecular_website"
@@ -129,12 +130,12 @@ export default function Home() {
                 width={1000}
                 height={1400}
               />
-            </a>
+            </Link>
           </div>
         </div>
         <div className="projectsection-wrap thirdproj_wrap">
           <div className="projectsection-col1">
-            <a href='/'>
+            <Link href='/'>
               <Image
                 src="/../public/country_app.png"
                 alt="country_website"
@@ -142,7 +143,7 @@ export default function Home() {
                 width={1000}
                 height={1000}
               />
-            </a>
+            </Link>
           </div>
           <div className="projectsection-col2">
             <p>Featured Project</p>
