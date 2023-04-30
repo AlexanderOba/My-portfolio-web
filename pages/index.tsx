@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   return (
     <main>
-       <NavBar />
+      <NavBar />
       <section className="section-1">
         <div className="section_heading-wrap">
           <h2 className="section-heading">Let&apos;s build something together</h2>
@@ -21,9 +21,11 @@ export default function Home() {
             can get in touch with me here.
           </p>
           <div>
-            <button className="button-1">Download CV</button>
+            <a href="https://drive.google.com/file/d/1eAkNxHaF_r9-D9X0JZzsEBcwaUa37PVj/view?usp=share_link" target='_blank' download>
+              <button className="button-1">View Resume</button>
+            </a>
             <button className="button-2">Hire me</button>
-          </div>
+          </div>https://drive.google.com/file/d/1eAkNxHaF_r9-D9X0JZzsEBcwaUa37PVj/view?usp=share_link
         </div>
       </section>
       <section className="section-2" id='Services'>
@@ -70,14 +72,16 @@ export default function Home() {
         <h2 className="section-heading--primary project-shade">Projects</h2>
         <div className="projectsection-wrap">
           <div className="projectsection-col1">
-            <Link href='/' className='project_imagewraper'>
-              <Image
-                src="/../public/yudimy_webshot.png"
-                alt="yudimy_website"
-                className="img-fluid project_placeholder"
-                width={1000}
-                height={1400}
-              />
+            <Link href='https://yudimy.com/' className='project_imagewraper' legacyBehavior={true}>
+              <a target='_blank'>
+                <Image
+                  src="/../public/yudimy_webshot.png"
+                  alt="yudimy_website"
+                  className="img-fluid project_placeholder"
+                  width={1000}
+                  height={1400}
+                />
+              </a>
             </Link>
           </div>
           <div className="projectsection-col2">
@@ -122,27 +126,31 @@ export default function Home() {
             </div>
           </div>
           <div className="projectsection-col1 ">
-            <Link href='/'>
-              <Image
-                src="/../public/molecular.png"
-                alt="molecular_website"
-                className="img-fluid altplaceholder"
-                width={1000}
-                height={1400}
-              />
+            <Link href='https://molecularpro.co/#/' legacyBehavior={true}>
+              <a target='_blank'>
+                <Image
+                  src="/../public/molecular.png"
+                  alt="molecular_website"
+                  className="img-fluid altplaceholder"
+                  width={1000}
+                  height={1400}
+                />
+              </a>
             </Link>
           </div>
         </div>
         <div className="projectsection-wrap thirdproj_wrap">
           <div className="projectsection-col1">
-            <Link href='/'>
-              <Image
-                src="/../public/country_app.png"
-                alt="country_website"
-                className="img-fluid project_placeholder"
-                width={1000}
-                height={1000}
-              />
+            <Link href='https://searchcountryapplication.netlify.app/' legacyBehavior={true}>
+              <a target='_blank'>
+                <Image
+                  src="/../public/country_app.png"
+                  alt="country_website"
+                  className="img-fluid project_placeholder"
+                  width={1000}
+                  height={1000}
+                />
+              </a>
             </Link>
           </div>
           <div className="projectsection-col2">
@@ -263,6 +271,6 @@ export default function Home() {
         </Carousel>
         <div className="img-shade2"></div>
       </section>
-    </main>
+    </main >
   )
 }
