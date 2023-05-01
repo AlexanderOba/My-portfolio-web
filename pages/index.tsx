@@ -7,6 +7,17 @@ import AOS from 'aos';
 import "aos/dist/aos.css";
 import { useEffect } from 'react';
 import exticon from '../public/external_white.png';
+import develop from "../public/develop_icon.png"
+import analytics_icon from "../public/analytics_ico.png"
+import audit from "../public/auddit_icon.png"
+import yudimy from "../public/yudimy_webshot.png"
+import github_icon from "../public/github.png"
+import external from "../public/external.png"
+import country_shot from "../public/country_app.png"
+import chris from "../public/chris.png";
+import zino from "../public/zino.png";
+import chinedu from "../public/chinedu.jpg"
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -51,7 +62,7 @@ export default function Home() {
         <div className="service_section-wrap">
           <div className="service_secion-cards" data-aos='flip-left'>
             <div className="serviceimgwrap">
-              <Image src="/../public/develop_icon.png" alt="icon" className="img-fluid servicecard-img" width={50} height={50} />
+              <Image src={develop} alt="icon" className="img-fluid servicecard-img" width={50} height={50} />
             </div>
             <h6>WEB DEVELOPMENT</h6>
             <p>
@@ -62,7 +73,7 @@ export default function Home() {
           <div className="service_secion-cards" data-aos='flip-left' >
             <div className="serviceimgwrap">
               <Image
-                src="/../public/analytics_ico.png"
+                src={analytics_icon}
                 alt="icon"
                 className=" servicecard-img"
                 width={50} height={50}
@@ -76,7 +87,7 @@ export default function Home() {
           </div>
           <div className="service_secion-cards" data-aos='flip-left' data-aos-duration="1000">
             <div className="serviceimgwrap">
-              <Image src="/../public/auddit_icon.png" alt="icon" className="servicecard-img" width={50} height={50} />
+              <Image src={audit} alt="icon" className="servicecard-img" width={50} height={50} />
             </div>
             <h6>WEBSITE AUDIT</h6>
             <p>
@@ -93,7 +104,7 @@ export default function Home() {
             <Link href='https://yudimy.com/' legacyBehavior={true}>
               <a target='_blank' className='project_imagewraper'>
                 <Image
-                  src="/../public/yudimy_webshot.png"
+                  src={yudimy}
                   alt="yudimy_website"
                   className="img-fluid project_placeholder"
                   width={1000}
@@ -114,13 +125,13 @@ export default function Home() {
             <div className="projmedia_wrap">
               <Link href='https://github.com/AlexanderOba/Yudimy ' legacyBehavior={true}>
                 <a target='_blank'>
-                  <Image src="/../public/github.png" alt="github" className="img-fluid media_icon" width={4} height={4} />
+                  <Image src={github_icon} alt="github" className="img-fluid media_icon" width={4} height={4} />
                 </a>
               </Link>
               <Link href='https://yudimy.com/' className='project_imagewraper' legacyBehavior={true}>
                 <a target='_blank' >
                   <Image
-                    src="/../public/external.png"
+                    src={external}
                     alt="external link"
                     className="img-fluid media_icon"
                     width={4}
@@ -143,13 +154,13 @@ export default function Home() {
             <div className="projmedia_wrap secondmediawrap">
               <Link href='/' legacyBehavior={true}>
                 <a target='_blank'>
-                  <Image src="/../public/github.png" alt="github" className="img-fluid media_icon" width={4} height={4} />
+                  <Image src={github_icon} alt="github" className="img-fluid media_icon" width={4} height={4} />
                 </a>
               </Link>
               <Link href='https://molecularpro.co/#/' legacyBehavior={true}>
                 <a target='_blank' >
                   <Image
-                    src="/../public/external.png"
+                    src={external}
                     alt="external link"
                     className="img-fluid media_icon"
                     width={4}
@@ -178,7 +189,7 @@ export default function Home() {
             <Link href='https://searchcountryapplication.netlify.app/' legacyBehavior={true}>
               <a target='_blank' className='project_imagewraper'>
                 <Image
-                  src="/../public/country_app.png"
+                  src={country_shot}
                   alt="country_website"
                   className="img-fluid project_placeholder"
                   width={1000}
@@ -198,13 +209,13 @@ export default function Home() {
             <div className="projmedia_wrap">
               <Link href='https://github.com/AlexanderOba/Countries-Info-App/tree/master' legacyBehavior={true}>
                 <a target='_blank'>
-                  <Image src="/../public/github.png" alt="github" className="img-fluid media_icon" width={4} height={4} />
+                  <Image src={github_icon} alt="github" className="img-fluid media_icon" width={4} height={4} />
                 </a>
               </Link>
               <Link href='https://searchcountryapplication.netlify.app/' legacyBehavior={true}>
                 <a target='_blank'>
                   <Image
-                    src="/../public/external.png"
+                    src={external}
                     alt="external link"
                     className="img-fluid media_icon"
                     width={4}
@@ -243,7 +254,7 @@ export default function Home() {
             <div className="feedback_wraper">
               <div className="feedbackimg-wrap">
                 <Image
-                  src="/../public/chris.png"
+                  src={chris}
                   alt="chris picture"
                   className="img-fluid feedbackimg"
                   width={300}
@@ -269,7 +280,7 @@ export default function Home() {
             <div className="feedback_wraper">
               <div className="feedbackimg-wrap">
                 <Image
-                  src="/../public/zino.jfif"
+                  src={zino}
                   alt="zino picture"
                   className="img-fluid feedbackimg"
                   width={300}
@@ -292,8 +303,8 @@ export default function Home() {
             <div className="feedback_wraper">
               <div className="feedbackimg-wrap">
                 <Image
-                  src="/../public/chinedu.jpg"
-                  alt="zino picture"
+                  src={chinedu}
+                  alt="chinedu picture"
                   className="img-fluid feedbackimg"
                   width={300}
                   height={300}
