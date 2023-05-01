@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <main>
       <NavBar />
-      <section className="section-1">
+      <section className="section-1" id='About'>
         <div className="section_heading-wrap">
           <h2 className="section-heading">Let&apos;s build something together</h2>
           <p className="section-para">
@@ -35,10 +35,14 @@ export default function Home() {
           <div>
             <Link href="https://drive.google.com/file/d/1eAkNxHaF_r9-D9X0JZzsEBcwaUa37PVj/view?usp=share_link" legacyBehavior={true}>
               <a target='_blank' >
-                <button className="button-1">View Resume  <Image src={exticon} alt="icon" className='img-fluid link_icon' width={15} height={15} /></button>
+                <button className="btn button-1">View Resume  <Image src={exticon} alt="icon" className='img-fluid link_icon' width={15} height={15} /></button>
               </a>
             </Link>
-            <button className="button-2">Hire me</button>
+            <Link href='mailto: alexashimedua@gmail.com' legacyBehavior={true}>
+              <a>
+                <button className="btn button-2">Hire me</button>
+              </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -108,7 +112,7 @@ export default function Home() {
             </div>
             <div>React | Typescript | Javascript</div>
             <div className="projmedia_wrap">
-              <Link href='/' legacyBehavior={true}>
+              <Link href='https://github.com/AlexanderOba/Yudimy ' legacyBehavior={true}>
                 <a target='_blank'>
                   <Image src="/../public/github.png" alt="github" className="img-fluid media_icon" width={4} height={4} />
                 </a>
@@ -192,7 +196,7 @@ export default function Home() {
             </div>
             <div> Angular | Typescript | Javascript</div>
             <div className="projmedia_wrap">
-              <Link href='/' legacyBehavior={true}>
+              <Link href='https://github.com/AlexanderOba/Countries-Info-App/tree/master' legacyBehavior={true}>
                 <a target='_blank'>
                   <Image src="/../public/github.png" alt="github" className="img-fluid media_icon" width={4} height={4} />
                 </a>
@@ -222,7 +226,11 @@ export default function Home() {
             </p>
           </div>
           <div className="section-4_col2">
-            <button className="button-3">Say Hello</button>
+            <Link href='mailto: support@basira.app' legacyBehavior={true}>
+              <a>
+                <button className="button-3 btn" >Say Hello</button>
+              </a>
+            </Link>
           </div>
         </div>
       </section>
