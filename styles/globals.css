@@ -8,6 +8,7 @@
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   --nav-scroll-height: 70px;
   --nav-height: 78px;
+  --navy: #0a192f;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -35,7 +36,7 @@ h6 {
 html {
   scroll-behavior: smooth !important;
 }
-header{
+header {
   display: flex;
   -webkit-box-pack: justify;
   align-items: center;
@@ -47,7 +48,7 @@ header{
   top: 0px;
   width: 100%;
   -webkit-backdrop-filter: saturate(180%) blur(5px);
-  backdrop-filter: saturate(180%) blur(5px); 
+  backdrop-filter: saturate(180%) blur(5px);
 }
 nav {
   display: flex;
@@ -90,16 +91,18 @@ nav {
   background-color: #fb0c49;
   color: #fff;
   margin-right: 23px;
-  padding: 14px 48px;
+  padding: 18px 3px;
   border-radius: 10px;
+  width: 30%;
 }
 .button-2 {
   -webkit-backdrop-filter: saturate(180%) blur(5px);
   backdrop-filter: saturate(180%) blur(5px);
   background: hsla(0, 0%, 100%, 0.2);
   color: #fff;
-  padding: 14px 48px;
+  padding: 18px 3px;
   border-radius: 10px;
+  width: 27%;
 }
 button {
   border: none;
@@ -148,7 +151,7 @@ button:focus {
   text-align: center;
   background-color: #fff;
   padding: 36px 20px 12px;
-  box-shadow: -8px 12px 22px rgba(0, 0, 0, 0.2);
+  box-shadow: 9px 12px 19px 8px rgba(0, 0, 0, 0.2);
 }
 .service_secion-cards > h6 {
   margin-bottom: 1rem;
@@ -182,11 +185,30 @@ button:focus {
   /* mix-blend-mode: multiply;
   filter: grayscale(85%) contrast(1) brightness(102%);
   transition: var(--transition); */
-  box-shadow: -1px 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 9px 12px 19px 8px rgba(0, 0, 0, 0.2);
   height: 100% !important;
   position: absolute;
   width: 58%;
+  background-color: var(--navy);
 }
+/* .project_placeholder:hover {
+  filter: grayscale(1%) contrast(1) brightness(100%);
+  z-index: 4;
+} */
+/* .project_imagewraper::before {
+  content: "";
+  position: absolute;
+  width: 58%;
+  height: 100%;
+  inset: 0px;
+  z-index: 3;
+  transition: var(--transition);
+  background-color: var(--navy);
+  mix-blend-mode: screen;
+}
+.project_imagewraper::before:hover{
+  z-index: -1;
+} */
 .altplaceholder {
   border-radius: 5px;
   box-shadow: -1px 10px 20px rgba(0, 0, 0, 0.2);
@@ -194,9 +216,7 @@ button:focus {
   position: absolute;
   width: 58%;
 }
-/* .project_placeholder:hover {
-  filter: grayscale(1%) contrast(1) brightness(100%);
-} */
+
 .projectsection-wrap {
   display: flex;
   position: relative;
@@ -218,7 +238,7 @@ button:focus {
   left: 105px;
 }
 .project-description {
-  box-shadow: -1px 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 9px 12px 19px 8px rgba(0, 0, 0, 0.2);
   transition: var(--transition);
   margin-bottom: 22px;
   margin-top: 12px;
@@ -242,7 +262,7 @@ button:focus {
   justify-content: flex-start;
 }
 .media_icon {
-  width: 4%;
+  width: 69%;
   margin-right: 10px;
   cursor: pointer;
 }
@@ -310,7 +330,7 @@ button:focus {
 }
 .carousel-control-next,
 .carousel-control-prev {
-  display: none !important;
+  display: none;
 }
 .carousel-indicators {
   bottom: -64px !important;
@@ -324,17 +344,7 @@ button:focus {
   margin-right: 8px;
   background-color: gray;
 }
-.project_imagewraper::before {
-  content: "";
-  position: absolute;
-  width: 58%;
-  height: 100%;
-  inset: 0px;
-  z-index: 3;
-  transition: var(--transition);
-  /* background-color: rgb(250, 250, 250, 0.842); */
-  mix-blend-mode: screen;
-}
+
 .img-shade2::before {
   content: url(../public/left_quote.jfif);
   position: absolute;
@@ -342,11 +352,15 @@ button:focus {
   left: 99px;
   top: 41px;
 }
+.link_icon {
+  width: 10%;
+  margin-left: 7px;
+}
 @media (max-width: 760px) {
   .section-1 {
     padding: 73px 15px 0px;
   }
-  nav{
+  nav {
     padding: 0px 15px;
   }
   .section_heading-wrap {

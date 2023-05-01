@@ -3,10 +3,22 @@ import NavBar from '@/components/navbar'
 import { Carousel } from "react-bootstrap";
 import Image from 'next/image'
 import Link from 'next/link';
+import AOS from 'aos';
+import "aos/dist/aos.css";
+import { useEffect } from 'react';
+import exticon from '../public/external_white.png';
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({
+      duration: 500,
+      easing: 'ease-in-out',
+      delay: 100,
+    });
+    AOS.refresh();
+  }, [])
   return (
     <main>
       <NavBar />
@@ -21,17 +33,19 @@ export default function Home() {
             can get in touch with me here.
           </p>
           <div>
-            <a href="https://drive.google.com/file/d/1eAkNxHaF_r9-D9X0JZzsEBcwaUa37PVj/view?usp=share_link" target='_blank' download>
-              <button className="button-1">View Resume</button>
-            </a>
+            <Link href="https://drive.google.com/file/d/1eAkNxHaF_r9-D9X0JZzsEBcwaUa37PVj/view?usp=share_link" legacyBehavior={true}>
+              <a target='_blank' >
+                <button className="button-1">View Resume  <Image src={exticon} alt="icon" className='img-fluid link_icon' width={15} height={15} /></button>
+              </a>
+            </Link>
             <button className="button-2">Hire me</button>
-          </div>https://drive.google.com/file/d/1eAkNxHaF_r9-D9X0JZzsEBcwaUa37PVj/view?usp=share_link
+          </div>
         </div>
       </section>
       <section className="section-2" id='Services'>
         <h2 className="section-heading--primary text-shade">Services</h2>
         <div className="service_section-wrap">
-          <div className="service_secion-cards">
+          <div className="service_secion-cards" data-aos='flip-left'>
             <div className="serviceimgwrap">
               <Image src="/../public/develop_icon.png" alt="icon" className="img-fluid servicecard-img" width={50} height={50} />
             </div>
@@ -41,7 +55,7 @@ export default function Home() {
               and converting users to customers
             </p>
           </div>
-          <div className="service_secion-cards">
+          <div className="service_secion-cards" data-aos='flip-left' >
             <div className="serviceimgwrap">
               <Image
                 src="/../public/analytics_ico.png"
@@ -50,13 +64,13 @@ export default function Home() {
                 width={50} height={50}
               />
             </div>
-            <h6> ANALYTICS</h6>
+            <h6>ANALYTICS</h6>
             <p>
               Get insight to see who is browsing your site so that you can make
               smarter decisons
             </p>
           </div>
-          <div className="service_secion-cards">
+          <div className="service_secion-cards" data-aos='flip-left' data-aos-duration="1000">
             <div className="serviceimgwrap">
               <Image src="/../public/auddit_icon.png" alt="icon" className="servicecard-img" width={50} height={50} />
             </div>
@@ -72,8 +86,8 @@ export default function Home() {
         <h2 className="section-heading--primary project-shade">Projects</h2>
         <div className="projectsection-wrap">
           <div className="projectsection-col1">
-            <Link href='https://yudimy.com/' className='project_imagewraper' legacyBehavior={true}>
-              <a target='_blank'>
+            <Link href='https://yudimy.com/' legacyBehavior={true}>
+              <a target='_blank' className='project_imagewraper'>
                 <Image
                   src="/../public/yudimy_webshot.png"
                   alt="yudimy_website"
@@ -87,21 +101,29 @@ export default function Home() {
           <div className="projectsection-col2">
             <p>Featured Project</p>
             <h5>Yudimy</h5>
-            <div className="project-description">
+            <div className="project-description" data-aos='fade-up'>
               Yudimy is a Behavioural profiling algorithm that blends psychology
               and machine learning to help people and organisations make
               intuitive decisions backed by data.
             </div>
             <div>React | Typescript | Javascript</div>
             <div className="projmedia_wrap">
-              <Image src="/../public/github.png" alt="github" className="img-fluid media_icon" width={4} height={4} />
-              <Image
-                src="/../public/external.png"
-                alt="external link"
-                className="img-fluid media_icon"
-                width={4}
-                height={4}
-              />
+              <Link href='/' legacyBehavior={true}>
+                <a target='_blank'>
+                  <Image src="/../public/github.png" alt="github" className="img-fluid media_icon" width={4} height={4} />
+                </a>
+              </Link>
+              <Link href='https://yudimy.com/' className='project_imagewraper' legacyBehavior={true}>
+                <a target='_blank' >
+                  <Image
+                    src="/../public/external.png"
+                    alt="external link"
+                    className="img-fluid media_icon"
+                    width={4}
+                    height={4}
+                  />
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -109,25 +131,33 @@ export default function Home() {
           <div className="projectsection-col2 second_proj">
             <p>Featured Project</p>
             <h5>MolecularPro</h5>
-            <div className="project-description">
+            <div className="project-description" data-aos='fade-up'>
               MolecularPro is a Technology driven work-force management solution
               for technical specialists in Africa&apos;s natural gas industry.
             </div>
             <div>React | Typescript | Javascript</div>
             <div className="projmedia_wrap secondmediawrap">
-              <Image src="/../public/github.png" alt="github" className="img-fluid media_icon" width={4} height={4} />
-              <Image
-                src="/../public/external.png"
-                alt="external link"
-                className="img-fluid media_icon"
-                width={800}
-                height={1800}
-              />
+              <Link href='/' legacyBehavior={true}>
+                <a target='_blank'>
+                  <Image src="/../public/github.png" alt="github" className="img-fluid media_icon" width={4} height={4} />
+                </a>
+              </Link>
+              <Link href='https://molecularpro.co/#/' legacyBehavior={true}>
+                <a target='_blank' >
+                  <Image
+                    src="/../public/external.png"
+                    alt="external link"
+                    className="img-fluid media_icon"
+                    width={4}
+                    height={4}
+                  />
+                </a>
+              </Link>
             </div>
           </div>
           <div className="projectsection-col1 ">
             <Link href='https://molecularpro.co/#/' legacyBehavior={true}>
-              <a target='_blank'>
+              <a target='_blank' className='project_imagewraper'>
                 <Image
                   src="/../public/molecular.png"
                   alt="molecular_website"
@@ -142,7 +172,7 @@ export default function Home() {
         <div className="projectsection-wrap thirdproj_wrap">
           <div className="projectsection-col1">
             <Link href='https://searchcountryapplication.netlify.app/' legacyBehavior={true}>
-              <a target='_blank'>
+              <a target='_blank' className='project_imagewraper'>
                 <Image
                   src="/../public/country_app.png"
                   alt="country_website"
@@ -156,20 +186,28 @@ export default function Home() {
           <div className="projectsection-col2">
             <p>Featured Project</p>
             <h5>Search country App</h5>
-            <div className="project-description">
+            <div className="project-description" data-aos='fade-up'>
               An application built with Angular, that fetches all the countries
               in the world and gives detailed information about each them.
             </div>
             <div> Angular | Typescript | Javascript</div>
             <div className="projmedia_wrap">
-              <Image src="/../public/github.png" alt="github" className="img-fluid media_icon" width={4} height={4} />
-              <Image
-                src="/../public/external.png"
-                alt="external link"
-                className="img-fluid media_icon"
-                width={4}
-                height={4}
-              />
+              <Link href='/' legacyBehavior={true}>
+                <a target='_blank'>
+                  <Image src="/../public/github.png" alt="github" className="img-fluid media_icon" width={4} height={4} />
+                </a>
+              </Link>
+              <Link href='https://searchcountryapplication.netlify.app/' legacyBehavior={true}>
+                <a target='_blank'>
+                  <Image
+                    src="/../public/external.png"
+                    alt="external link"
+                    className="img-fluid media_icon"
+                    width={4}
+                    height={4}
+                  />
+                </a>
+              </Link>
             </div>
           </div>
         </div>
