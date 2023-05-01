@@ -174,7 +174,7 @@ export default function Home() {
             <Link href='https://molecularpro.co/#/' legacyBehavior={true}>
               <a target='_blank' className='project_imagewraper'>
                 <Image
-                  src="/../public/molecular.png"
+                  src={country_shot}
                   alt="molecular_website"
                   className="img-fluid altplaceholder"
                   width={1000}
