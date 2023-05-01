@@ -17,7 +17,7 @@ import country_shot from "../public/country_app.png"
 import chris from "../public/chris.png";
 import zino from "../public/zino.png";
 import chinedu from "../public/chinedu.jpg"
-
+import molecular from "../public/molecular.png"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -174,7 +174,7 @@ export default function Home() {
             <Link href='https://molecularpro.co/#/' legacyBehavior={true}>
               <a target='_blank' className='project_imagewraper'>
                 <Image
-                  src={country_shot}
+                  src={molecular}
                   alt="molecular_website"
                   className="img-fluid altplaceholder"
                   width={1000}
