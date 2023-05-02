@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import styles from '../styles/navBar.module.css';
-import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { useScrollDirection } from "./useScrollDirection";
 import logo from '../public/navlogo.png'
+import Navlist from './navList.js';
+import Burger from './burger';
 
 
 function NavBar() {
-  const router = useRouter();
   const [scrollDirection, setScrollDirection] = useState('none');
   const [scrollPosition, setScrollPosition] = useState(0);
   const [showMenu, setShowMenu] = useState(true);
@@ -47,23 +47,7 @@ function NavBar() {
               <p>SOFTWARE ENGINEER</p>
             </div>
           </div>
-          <ul className={styles.Navlinks}>
-            <Link href="/#About" as="/#About">
-              <li className={router.asPath === '/#About' ? `${styles.activenavlink}` : ''}>About</li>
-            </Link>
-            <Link href="/#Services" as="/#Services">
-              <li className={router.asPath === '/#Services' ? `${styles.activenavlink}` : ''}>Services</li>
-            </Link>
-            <Link href="/#Projects" as="/#Projects">
-              <li className={router.asPath === '/#Projects' ? `${styles.activenavlink}` : ''}>Projects</li>
-            </Link>
-            <Link href="/#Testimonials" as="/#Testimonials">
-              <li className={router.asPath === '/#Testimonials' ? `${styles.activenavlink}` : ''}>Testimonials</li>
-            </Link>
-            <Link href="/#Contact" as="/#Contact">
-              <li className={router.asPath === '/#Contact' ? `${styles.activenavlink}` : ''}>Contact</li>
-            </Link>
-          </ul>
+         <Burger/>
         </nav>
       </header>
     </div>
