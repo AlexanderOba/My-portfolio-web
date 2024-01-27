@@ -44,7 +44,7 @@ export default function Home() {
             can get in touch with me here.
           </p>
           <div>
-            <Link href="https://drive.google.com/file/d/1CRqoxNttsrePaTyRp1EHVnXxL6tA3jdX/view?usp=drive_link" legacyBehavior={true}>
+            <Link href="https://drive.google.com/file/d/17VwbQBxm2SBxQ1MHZRxMTNvSUgqAUYay/view?usp=drive_link" legacyBehavior={true}>
               <a target='_blank' >
                 <button className="btn button-1">View Resume  <Image src={exticon} alt="icon" className='img-fluid link_icon' width={15} height={15} /></button>
               </a>
