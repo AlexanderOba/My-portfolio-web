@@ -9,7 +9,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Alex Portfolio web</title>
+        <title>Alexander Ashimedua- Software Engineer Portfolio</title>
       </Head>
       <Component {...pageProps} />
     </>

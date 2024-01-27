@@ -51,6 +51,9 @@
 .activenavlink {
   border-bottom: 3px solid #fb0c49 !important;
 }
+/* .burgerwraper{
+  display: none;
+} */
 /* #C45AB3 */
 @media (max-width: 760px) {
   .Nav_logotext > h6 {
