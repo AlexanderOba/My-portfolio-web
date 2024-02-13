@@ -14,6 +14,8 @@ import yudimy from "../public/yudimy_webshot.png"
 import github_icon from "../public/github.png"
 import external from "../public/external.png"
 import country_shot from "../public/country_app.png"
+import alley from "../public/alley.png"
+
 import chris from "../public/chris.png";
 import zino from "../public/zino.png";
 import chinedu from "../public/chinedu.jpg"
@@ -100,6 +102,46 @@ export default function Home() {
       <section className="section-3" id='Projects'>
         <h2 className="section-heading--primary project-shade">Projects</h2>
         <div className="projectsection-wrap">
+          <div className="projectsection-col2 second_proj">
+            <p>Featured Project</p>
+            <h5>AlleyBookings</h5>
+            <div className="project-description" data-aos='fade-up'>
+              Alleybookings is an online platform where experiences find customers and vice versa,
+               be it accommodations or local attractions, 
+               Alleybookings enables properties around the world to reach a global audience and grow their businesses.
+            </div>
+            <div>Next JS | Javascript</div>
+            <div className="projmedia_wrap secondmediawrap">
+              <a target='_blank' href='https://github.com/alleybookings/Frontend'>
+                <Image src={github_icon} alt="github" className="img-fluid media_icon" width={4} height={4} />
+              </a>
+              <a target='_blank' href='https://staging.alleybookings.com/'>
+                <Image
+                  src={external}
+                  alt="external link"
+                  className="img-fluid media_icon"
+                  width={4}
+                  height={4}
+                />
+              </a>
+            </div>
+          </div>
+          <div className="projectsection-col1 ">
+            <Link href='https://molecularpro.co/#/' legacyBehavior={true}>
+              <a target='_blank' className='project_imagewraper'>
+                <Image
+                  src={alley}
+                  alt="alleybookings"
+                  className="img-fluid altplaceholder"
+                  width={1000}
+                  height={1400}
+                />
+              </a>
+            </Link>
+          </div>
+        </div>
+
+        <div className="projectsection-wrap">
           <div className="projectsection-col1">
             <Link href='https://yudimy.com/' legacyBehavior={true}>
               <a target='_blank' className='project_imagewraper'>
@@ -113,6 +155,7 @@ export default function Home() {
               </a>
             </Link>
           </div>
+
           <div className="projectsection-col2">
             <p>Featured Project</p>
             <h5>Yudimy</h5>
