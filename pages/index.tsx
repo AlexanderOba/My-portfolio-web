@@ -237,7 +237,7 @@ export default function Home() {
             </p>
           </div>
           <div className="section-4_col2">
-            <Link href='mailto: support@basira.app' legacyBehavior={true}>
+            <Link href='mailto: alexashimedua@gmail.com' legacyBehavior={true}>
               <a>
                 <button className="button-3 btn" >Say Hello</button>
               </a>
