@@ -495,3 +495,7 @@ nav {
     width: 93%;
   }
 }
+.icon-margin{
+  margin-right: 1rem;
+  font-size: 20px;
+}

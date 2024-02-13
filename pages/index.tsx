@@ -15,7 +15,7 @@ import github_icon from "../public/github.png"
 import external from "../public/external.png"
 import country_shot from "../public/country_app.png"
 import alley from "../public/alley.png"
-
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import chris from "../public/chris.png";
 import zino from "../public/zino.png";
 import chinedu from "../public/chinedu.jpg"
@@ -107,22 +107,16 @@ export default function Home() {
             <h5>AlleyBookings</h5>
             <div className="project-description" data-aos='fade-up'>
               Alleybookings is an online platform where experiences find customers and vice versa,
-               be it accommodations or local attractions, 
-               Alleybookings enables properties around the world to reach a global audience and grow their businesses.
+              be it accommodations or local attractions,
+              Alleybookings enables properties around the world to reach a global audience and grow their businesses.
             </div>
             <div>Next JS | Javascript</div>
             <div className="projmedia_wrap secondmediawrap">
               <a target='_blank' href='https://github.com/alleybookings/Frontend'>
-                <Image src={github_icon} alt="github" className="img-fluid media_icon" width={4} height={4} />
+                <FaGithub className='text-black icon-margin' />
               </a>
               <a target='_blank' href='https://staging.alleybookings.com/'>
-                <Image
-                  src={external}
-                  alt="external link"
-                  className="img-fluid media_icon"
-                  width={4}
-                  height={4}
-                />
+                <FaExternalLinkAlt className='text-black' />
               </a>
             </div>
           </div>
@@ -168,22 +162,17 @@ export default function Home() {
             <div className="projmedia_wrap">
               <Link href='https://github.com/AlexanderOba/Yudimy ' legacyBehavior={true}>
                 <a target='_blank'>
-                  <Image src={github_icon} alt="github" className="img-fluid media_icon" width={4} height={4} />
+                  <FaGithub className='text-black icon-margin' />
                 </a>
               </Link>
               <Link href='https://yudimy.com/' className='project_imagewraper' legacyBehavior={true}>
                 <a target='_blank' >
-                  <Image
-                    src={external}
-                    alt="external link"
-                    className="img-fluid media_icon"
-                    width={4}
-                    height={4}
-                  />
+                  <FaExternalLinkAlt className='text-black' />
                 </a>
               </Link>
             </div>
           </div>
+
         </div>
         <div className="projectsection-wrap">
           <div className="projectsection-col2 second_proj">
@@ -197,18 +186,12 @@ export default function Home() {
             <div className="projmedia_wrap secondmediawrap">
               <Link href='/' legacyBehavior={true}>
                 <a target='_blank'>
-                  <Image src={github_icon} alt="github" className="img-fluid media_icon" width={4} height={4} />
+                  <FaGithub className='text-black icon-margin' />
                 </a>
               </Link>
               <Link href='https://molecularpro.co/#/' legacyBehavior={true}>
                 <a target='_blank' >
-                  <Image
-                    src={external}
-                    alt="external link"
-                    className="img-fluid media_icon"
-                    width={4}
-                    height={4}
-                  />
+                  <FaExternalLinkAlt className='text-black' />
                 </a>
               </Link>
             </div>
@@ -241,6 +224,7 @@ export default function Home() {
               </a>
             </Link>
           </div>
+
           <div className="projectsection-col2">
             <p>Featured Project</p>
             <h5>Search country App</h5>
@@ -252,22 +236,17 @@ export default function Home() {
             <div className="projmedia_wrap">
               <Link href='https://github.com/AlexanderOba/Countries-Info-App/tree/master' legacyBehavior={true}>
                 <a target='_blank'>
-                  <Image src={github_icon} alt="github" className="img-fluid media_icon" width={4} height={4} />
+                  <FaGithub className='text-black icon-margin' />
                 </a>
               </Link>
               <Link href='https://searchcountryapplication.netlify.app/' legacyBehavior={true}>
                 <a target='_blank'>
-                  <Image
-                    src={external}
-                    alt="external link"
-                    className="img-fluid media_icon"
-                    width={4}
-                    height={4}
-                  />
+                  <FaExternalLinkAlt className='text-black' />
                 </a>
               </Link>
             </div>
           </div>
+
         </div>
       </section>
       <section className="section-4" id='Contact'>
