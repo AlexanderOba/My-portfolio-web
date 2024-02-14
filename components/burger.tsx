@@ -33,7 +33,7 @@ const StyledBurger = styled.div<StyledBurgerProps>`
     }
   }
   @media screen and (max-width: 760px) {
-    display: block;
+    display: block !important;
     position: fixed;
     right: 21px;
     z-index: 21;
