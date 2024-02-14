@@ -9,7 +9,7 @@ interface StyledBurgerProps {
 }
 
 const StyledBurger = styled.div<StyledBurgerProps>`
-  display: none;
+  display: none !important;
   cursor: pointer;
 
   div {
