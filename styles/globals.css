@@ -75,12 +75,13 @@ nav {
   width: 57%;
   font-family: "Inter", sans-serif;
   padding-bottom: 130px;
+  padding-top: 120px;
 }
 .section-heading {
   color: #fff;
   font-weight: 600;
   margin: 98px 0px 22px;
-  font-size: 38px;
+  font-size: 16px;
 }
 .section-para {
   color: #ececec;

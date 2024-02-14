@@ -34,6 +34,7 @@ function NavBar() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [scrollPosition]);
+  
   return (
     <div>
       <header className={`navigation-menu ${showMenu ? '' : styles.hidden} ${scrollPosition === 0 ? styles.topPageNav : ''} ${scrollPosition > 600 ? styles.changeNavBackground : ''}`}>

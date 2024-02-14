@@ -1,29 +1,29 @@
-import { Inter } from 'next/font/google'
-import NavBar from '@/components/navbar'
-import { Carousel } from "react-bootstrap";
-import Image from 'next/image'
-import Link from 'next/link';
+import NavBar from '@/components/navbar';
 import AOS from 'aos';
 import "aos/dist/aos.css";
+import { Inter } from 'next/font/google';
+import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect } from 'react';
-import exticon from '../public/external_white.png';
-import develop from "../public/develop_icon.png"
-import analytics_icon from "../public/analytics_ico.png"
-import audit from "../public/auddit_icon.png"
-import yudimy from "../public/yudimy_webshot.png"
-import github_icon from "../public/github.png"
-import external from "../public/external.png"
-import country_shot from "../public/country_app.png"
-import alley from "../public/alley.png"
+import { Carousel } from "react-bootstrap";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { TypeAnimation } from 'react-type-animation';
+import alley from "../public/alley.png";
+import analytics_icon from "../public/analytics_ico.png";
+import audit from "../public/auddit_icon.png";
+import chinedu from "../public/chinedu.jpg";
 import chris from "../public/chris.png";
+import country_shot from "../public/country_app.png";
+import develop from "../public/develop_icon.png";
+import exticon from '../public/external_white.png';
+import molecular from "../public/molecular.png";
+import yudimy from "../public/yudimy_webshot.png";
 import zino from "../public/zino.png";
-import chinedu from "../public/chinedu.jpg"
-import molecular from "../public/molecular.png"
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  
   useEffect(() => {
     AOS.init({
       duration: 500,
@@ -32,12 +32,26 @@ export default function Home() {
     });
     AOS.refresh();
   }, [])
+
   return (
     <main>
       <NavBar />
+
       <section className="section-1" id='About'>
         <div className="section_heading-wrap">
-          <h2 className="section-heading">Let&apos;s build something together</h2>
+          <TypeAnimation
+            sequence={[
+              "Elevating Ideas into Exceptional Experiences",
+              2000,
+              "Let's Build Something Together",
+              2000,
+              "Where Creativity Meets Code - Let's Create Magic!",
+              2000,
+            ]}
+            speed={40}
+            style={{ fontSize: '38px', fontWeight: 600, color: "#fff" }}
+            repeat={Infinity}
+          />
           <p className="section-para">
             Hi, my name is Alexander, I&#39;m a Software engineer currently living
             in Lagos, Nigeria and I enjoy building everything from small
@@ -59,6 +73,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <section className="section-2" id='Services'>
         <h2 className="section-heading--primary text-shade">Services</h2>
         <div className="service_section-wrap">
@@ -99,6 +114,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <section className="section-3" id='Projects'>
         <h2 className="section-heading--primary project-shade">Projects</h2>
         <div className="projectsection-wrap">
@@ -249,6 +265,7 @@ export default function Home() {
 
         </div>
       </section>
+
       <section className="section-4" id='Contact'>
         <div className="section-4_wraper">
           <div className="section-4_col1">
@@ -267,6 +284,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <section className="section-5" id='Testimonials'>
         <h3 className="feedback_heading img-shade">
           What client <br /> Feed back about me
@@ -350,6 +368,7 @@ export default function Home() {
         </Carousel>
         <div className="img-shade2"></div>
       </section>
+
     </main >
   )
 }
