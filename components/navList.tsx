@@ -11,7 +11,7 @@ const Ul = styled.ul<UlProps>`
   list-style: none;
   display: flex;
   justify-content: space-around;
-  width: 31%;
+  width: 43%;
   color: #333;
   font-size: 17px;
   align-items: baseline;
