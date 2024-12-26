@@ -8,7 +8,6 @@ import { useEffect } from 'react';
 import { Carousel } from "react-bootstrap";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { TypeAnimation } from 'react-type-animation';
-import alley from "../public/alley.png";
 import analytics_icon from "../public/analytics_ico.png";
 import audit from "../public/auddit_icon.png";
 import chinedu from "../public/chinedu.jpg";
@@ -16,14 +15,13 @@ import chris from "../public/chris.png";
 import country_shot from "../public/country_app.png";
 import develop from "../public/develop_icon.png";
 import exticon from '../public/external_white.png';
-import molecular from "../public/molecular.png";
 import yudimy from "../public/yudimy_webshot.png";
 import zino from "../public/zino.png";
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  
+
   useEffect(() => {
     AOS.init({
       duration: 500,
@@ -60,7 +58,7 @@ export default function Home() {
             can get in touch with me here.
           </p>
           <div>
-            <Link href="https://drive.google.com/file/d/17VwbQBxm2SBxQ1MHZRxMTNvSUgqAUYay/view?usp=drive_link" legacyBehavior={true}>
+            <Link href="https://drive.google.com/file/d/1J9pKaCv1sbxKDb0m14E9qoMBrQTW0yzp/view?usp=drive_link" legacyBehavior={true}>
               <a target='_blank' >
                 <button className="btn button-1">View Resume  <Image src={exticon} alt="icon" className='img-fluid link_icon' width={15} height={15} /></button>
               </a>
@@ -120,28 +118,27 @@ export default function Home() {
         <div className="projectsection-wrap">
           <div className="projectsection-col2 second_proj">
             <p>Featured Project</p>
-            <h5>AlleyBookings</h5>
+            <h5>Iklasstutors</h5>
             <div className="project-description" data-aos='fade-up'>
-              Alleybookings is an online platform where experiences find customers and vice versa,
-              be it accommodations or local attractions,
-              Alleybookings enables properties around the world to reach a global audience and grow their businesses.
+              Iklasstutors.ng is one of Nigeria’s most trusted leading online platform for tutors & students.
+              It helps students/parents to find verified & skilled tutors in-person
             </div>
-            <div>Next JS | Javascript</div>
+            <div>Next JS | Javascript | Node JS</div>
             <div className="projmedia_wrap secondmediawrap">
               <a target='_blank' href='https://github.com/alleybookings/Frontend'>
                 <FaGithub className='text-black icon-margin' />
               </a>
-              <a target='_blank' href='https://staging.alleybookings.com/'>
+              <a target='_blank' href='https://iklasstutors.ng/'>
                 <FaExternalLinkAlt className='text-black' />
               </a>
             </div>
           </div>
           <div className="projectsection-col1 ">
-            <Link href='https://staging.alleybookings.com/' legacyBehavior={true}>
+            <Link href='https://iklasstutors.ng/' legacyBehavior={true}>
               <a target='_blank' className='project_imagewraper'>
                 <Image
-                  src={alley}
-                  alt="alleybookings"
+                  src="/iklasstutors.png"
+                  alt="iklass"
                   className="img-fluid altplaceholder"
                   width={1000}
                   height={1400}
@@ -193,19 +190,21 @@ export default function Home() {
         <div className="projectsection-wrap">
           <div className="projectsection-col2 second_proj">
             <p>Featured Project</p>
-            <h5>MolecularPro</h5>
+            <h5>GreyTech</h5>
             <div className="project-description" data-aos='fade-up'>
-              MolecularPro is a Technology driven work-force management solution
-              for technical specialists in Africa&apos;s natural gas industry.
+              GreyTech is a comprehensive web platform designed to facilitate the interaction between technicians
+              and technical service companies. The platform allows technicians to register and showcase their skills
+              while enabling technical service companies (TSCs) to post job listings and hire technicians for various
+              projects.
             </div>
-            <div>React | Typescript | Javascript</div>
+            <div> Next JS | Typescript | Javascript | Node JS </div>
             <div className="projmedia_wrap secondmediawrap">
               <Link href='/' legacyBehavior={true}>
                 <a target='_blank'>
                   <FaGithub className='text-black icon-margin' />
                 </a>
               </Link>
-              <Link href='https://molecularpro.co/#/' legacyBehavior={true}>
+              <Link href='https://grey-tech-web.vercel.app/ ' legacyBehavior={true}>
                 <a target='_blank' >
                   <FaExternalLinkAlt className='text-black' />
                 </a>
@@ -213,10 +212,10 @@ export default function Home() {
             </div>
           </div>
           <div className="projectsection-col1 ">
-            <Link href='https://molecularpro.co/#/' legacyBehavior={true}>
+            <Link href='https://grey-tech-web.vercel.app/ ' legacyBehavior={true}>
               <a target='_blank' className='project_imagewraper'>
                 <Image
-                  src={molecular}
+                  src="/greyTech.png"
                   alt="molecular_website"
                   className="img-fluid altplaceholder"
                   width={1000}
@@ -263,6 +262,43 @@ export default function Home() {
             </div>
           </div>
 
+        </div>
+        <div className="projectsection-wrap mt-5">
+          <div className="projectsection-col2 second_proj">
+            <p>Featured Project</p>
+            <h5>Bandage Ecommerce</h5>
+            <div className="project-description" data-aos='fade-up'>
+              Bandage is an e-commerce platform that provides users with a seamless shopping experience. The
+              platform allows users to browse items, add them to their cart with persistent data, and view detailed
+              information about each item. Additionally, users can mark items as favorites for future reference.
+            </div>
+            <div> Next JS | Typescript | Javascript</div>
+            <div className="projmedia_wrap secondmediawrap">
+              <Link href='/' legacyBehavior={true}>
+                <a target='_blank'>
+                  <FaGithub className='text-black icon-margin' />
+                </a>
+              </Link>
+              <Link href='https://bandage-ecommerce-website.vercel.app/' legacyBehavior={true}>
+                <a target='_blank' >
+                  <FaExternalLinkAlt className='text-black' />
+                </a>
+              </Link>
+            </div>
+          </div>
+          <div className="projectsection-col1">
+            <Link href='https://bandage-ecommerce-website.vercel.app/' legacyBehavior={true}>
+              <a target='_blank' className='project_imagewraper'>
+                <Image
+                  src="/bandagee.png"
+                  alt="molecular_website"
+                  className="img-fluid altplaceholder"
+                  width={1000}
+                  height={1000}
+                />
+              </a>
+            </Link>
+          </div>
         </div>
       </section>
 
