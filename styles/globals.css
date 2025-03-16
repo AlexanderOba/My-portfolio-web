@@ -1,3 +1,4 @@
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -19,6 +20,7 @@
     --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   }
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -50,6 +52,12 @@ header {
   -webkit-backdrop-filter: saturate(180%) blur(5px);
   backdrop-filter: saturate(180%) blur(5px);
 }
+
+.button-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -94,7 +102,7 @@ nav {
   border-radius: 10px;
   position: relative;
 }
-.btn::before{
+.btn::before {
   content: "";
   position: absolute;
   z-index: 1;
@@ -103,14 +111,14 @@ nav {
   right: -1px;
   bottom: -1px;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, .2);
+  background-color: rgba(255, 255, 255, 0.2);
   transform: scaleY(0);
   transform-origin: 50% 100%;
   transition-property: transform;
   transition-duration: 0.5s;
   transition-timing-function: ease-out;
 }
-.btn:hover::before{
+.btn:hover::before {
   transform: scaleY(1);
   transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
 }
@@ -120,14 +128,16 @@ nav {
   background: hsla(0, 0%, 100%, 0.2) !important;
   border-radius: 10px;
 }
+
 .btn {
   position: relative;
   border: none;
   outline: none;
   color: #fff !important;
   padding: 18px 3px !important;
-  width: 30%;
+  width: 100%;
 }
+
 .btn:focus :active {
   border: none;
   outline: none;
@@ -213,24 +223,7 @@ nav {
   width: 58%;
   background-color: var(--navy);
 }
-/* .project_placeholder:hover {
-  filter: grayscale(1%) contrast(1) brightness(100%);
-  z-index: 4;
-} */
-/* .project_imagewraper::before {
-  content: "";
-  position: absolute;
-  width: 58%;
-  height: 100%;
-  inset: 0px;
-  z-index: 3;
-  transition: var(--transition);
-  background-color: var(--navy);
-  mix-blend-mode: screen;
-}
-.project_imagewraper::before:hover{
-  z-index: -1;
-} */
+
 .altplaceholder {
   border-radius: 5px;
   box-shadow: -1px 10px 20px rgba(0, 0, 0, 0.2);
@@ -492,11 +485,19 @@ nav {
   .button-2 {
     width: 45%;
   }
-  .button-3{
+  .button-3 {
     width: 93%;
   }
 }
-.icon-margin{
+.icon-margin {
   margin-right: 1rem;
   font-size: 20px;
+}
+
+.ant-modal-content{
+  background-color: #f7f7f7 !important;
+}
+
+.ant-modal-content{
+  box-shadow: none !important;
 }

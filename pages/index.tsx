@@ -1,26 +1,27 @@
+import MessageForm from '@/components/MessageForm';
 import NavBar from '@/components/navbar';
+import { Modal } from 'antd';
 import AOS from 'aos';
 import "aos/dist/aos.css";
-import { Inter } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Carousel } from "react-bootstrap";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { TypeAnimation } from 'react-type-animation';
-import analytics_icon from "../public/analytics_ico.png";
-import audit from "../public/auddit_icon.png";
-import chinedu from "../public/chinedu.jpg";
-import chris from "../public/chris.png";
-import country_shot from "../public/country_app.png";
-import develop from "../public/develop_icon.png";
-import exticon from '../public/external_white.png';
-import yudimy from "../public/yudimy_webshot.png";
-import zino from "../public/zino.png";
 
-const inter = Inter({ subsets: ['latin'] })
+
 
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
 
   useEffect(() => {
     AOS.init({
@@ -34,7 +35,18 @@ export default function Home() {
   return (
     <main>
       <NavBar />
-
+      <Modal
+        open={isModalOpen}
+        onCancel={handleCancel}
+        footer={null} 
+        style={{
+          backgroundColor: '#f7f7f7',
+          color: '#333',
+          borderRadius: '8px'
+        }}
+      >
+          <MessageForm closeModal={handleCancel}/>
+      </Modal>
       <section className="section-1" id='About'>
         <div className="section_heading-wrap">
           <TypeAnimation
@@ -46,9 +58,9 @@ export default function Home() {
               "Where Creativity Meets Code - Let's Create Magic!",
               2000,
             ]}
-            speed={40}
+            speed={10}
             style={{ fontSize: '38px', fontWeight: 600, color: "#fff" }}
-            repeat={Infinity}
+            repeat={0}
           />
           <p className="section-para">
             Hi, my name is Alexander, I&#39;m a Software engineer currently living
@@ -57,17 +69,17 @@ export default function Home() {
             business seeking a web presence or an employer looking to hire, you
             can get in touch with me here.
           </p>
-          <div>
-            <Link href="https://drive.google.com/file/d/1J9pKaCv1sbxKDb0m14E9qoMBrQTW0yzp/view?usp=drive_link" legacyBehavior={true}>
-              <a target='_blank' >
-                <button className="btn button-1">View Resume  <Image src={exticon} alt="icon" className='img-fluid link_icon' width={15} height={15} /></button>
+          <div className='button-wrapper'>
+            <Link href="https://drive.google.com/file/d/18GbEUzFSCLIFL8sdAawjo6NwcYaTpUhr/view?usp=drive_link" legacyBehavior={true}>
+              <a target='_blank' style={{width: '35%', textDecoration: 'none'}}>
+                <button className="btn button-1 flex" style={{width: '100%', display: 'flex', justifyContent: 'center', gap: '5px'}}>
+                  View Resume  <Image src="/external_white.png" alt="icon" className='img-fluid link_icon' width={10} height={10} />
+                  </button>
               </a>
             </Link>
-            <Link href='mailto: alexashimedua@gmail.com' legacyBehavior={true}>
-              <a>
-                <button className="btn button-2">Hire me</button>
-              </a>
-            </Link>
+              <div style={{width: '34%'}}>
+                <button className="btn button-2"onClick={showModal} style={{width: '100%'}}>Hire me</button>
+              </div>
           </div>
         </div>
       </section>
@@ -77,7 +89,7 @@ export default function Home() {
         <div className="service_section-wrap">
           <div className="service_secion-cards" data-aos='flip-left'>
             <div className="serviceimgwrap">
-              <Image src={develop} alt="icon" className="img-fluid servicecard-img" width={50} height={50} />
+              <Image src="/develop_icon.png" alt="icon" className="img-fluid servicecard-img" width={50} height={50} />
             </div>
             <h6>WEB DEVELOPMENT</h6>
             <p>
@@ -88,7 +100,7 @@ export default function Home() {
           <div className="service_secion-cards" data-aos='flip-left' >
             <div className="serviceimgwrap">
               <Image
-                src={analytics_icon}
+                src="/analytics_ico.png"
                 alt="icon"
                 className=" servicecard-img"
                 width={50} height={50}
@@ -102,7 +114,7 @@ export default function Home() {
           </div>
           <div className="service_secion-cards" data-aos='flip-left' data-aos-duration="1000">
             <div className="serviceimgwrap">
-              <Image src={audit} alt="icon" className="servicecard-img" width={50} height={50} />
+              <Image src="/auddit_icon.png" alt="icon" className="servicecard-img" width={50} height={50} />
             </div>
             <h6>WEBSITE AUDIT</h6>
             <p>
@@ -153,7 +165,7 @@ export default function Home() {
             <Link href='https://yudimy.com/' legacyBehavior={true}>
               <a target='_blank' className='project_imagewraper'>
                 <Image
-                  src={yudimy}
+                  src="/yudimy.png"
                   alt="yudimy_website"
                   className="img-fluid project_placeholder"
                   width={1000}
@@ -230,7 +242,7 @@ export default function Home() {
             <Link href='https://searchcountryapplication.netlify.app/' legacyBehavior={true}>
               <a target='_blank' className='project_imagewraper'>
                 <Image
-                  src={country_shot}
+                  src="/country_app.png"
                   alt="country_website"
                   className="img-fluid project_placeholder"
                   width={1000}
@@ -330,7 +342,7 @@ export default function Home() {
             <div className="feedback_wraper">
               <div className="feedbackimg-wrap">
                 <Image
-                  src={chris}
+                  src="/chris.png"
                   alt="chris picture"
                   className="img-fluid feedbackimg"
                   width={300}
@@ -356,7 +368,7 @@ export default function Home() {
             <div className="feedback_wraper">
               <div className="feedbackimg-wrap">
                 <Image
-                  src={zino}
+                  src="/zino.png"
                   alt="zino picture"
                   className="img-fluid feedbackimg"
                   width={300}
@@ -379,7 +391,7 @@ export default function Home() {
             <div className="feedback_wraper">
               <div className="feedbackimg-wrap">
                 <Image
-                  src={chinedu}
+                  src="/chinedu.jpg"
                   alt="chinedu picture"
                   className="img-fluid feedbackimg"
                   width={300}
