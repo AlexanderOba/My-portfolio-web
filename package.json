@@ -25,6 +25,7 @@
     "dotenv": "^16.4.7",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
+    "formik": "^2.4.6",
     "mongoose": "^8.9.3",
     "next": "13.3.0",
     "postcss": "8.4.21",
