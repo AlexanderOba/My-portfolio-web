@@ -132,7 +132,7 @@ export default function Home() {
             <p>Featured Project</p>
             <h5>Iklasstutors</h5>
             <div className="project-description" data-aos='fade-up'>
-              Iklasstutors.ng is one of Nigeria’s most trusted leading online platform for tutors & students.
+              Iklasstutors is one of Nigeria’s most trusted leading online platform for tutors & students.
               It helps students/parents to find verified & skilled tutors in-person
             </div>
             <div>Next JS | Javascript | Node JS</div>
@@ -140,13 +140,13 @@ export default function Home() {
               <a target='_blank' href='https://github.com/alleybookings/Frontend'>
                 <FaGithub className='text-black icon-margin' />
               </a>
-              <a target='_blank' href='https://iklasstutors.ng/'>
+              <a target='_blank' href='https://www.iklasstutors.com/'>
                 <FaExternalLinkAlt className='text-black' />
               </a>
             </div>
           </div>
           <div className="projectsection-col1 ">
-            <Link href='https://iklasstutors.ng/' legacyBehavior={true}>
+            <Link href='https://www.iklasstutors.com/' legacyBehavior={true}>
               <a target='_blank' className='project_imagewraper'>
                 <Image
                   src="/iklasstutors.png"
