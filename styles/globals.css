@@ -145,6 +145,11 @@ nav {
   padding: 18px 3px;
   width: 30% !important;
 }
+
+.btn-link{
+  width: 35%;
+  text-decoration: none !important;
+}
 .service_section-wrap {
   display: flex;
   justify-content: space-between;
@@ -372,6 +377,10 @@ nav {
   margin-left: 7px;
 }
 @media (max-width: 760px) {
+  .btn-link{
+    width: 55%;
+    text-decoration: none !important;
+  }
   .section-1 {
     padding: 73px 15px 0px;
   }

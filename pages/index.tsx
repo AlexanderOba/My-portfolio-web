@@ -71,7 +71,7 @@ export default function Home() {
           </p>
           <div className='button-wrapper'>
             <Link href="https://drive.google.com/file/d/18GbEUzFSCLIFL8sdAawjo6NwcYaTpUhr/view?usp=drive_link" legacyBehavior={true}>
-              <a target='_blank' style={{width: '35%', textDecoration: 'none'}}>
+              <a target='_blank' className='btn-link'>
                 <button className="btn button-1 flex" style={{width: '100%', display: 'flex', justifyContent: 'center', gap: '5px'}}>
                   View Resume  <Image src="/external_white.png" alt="icon" className='img-fluid link_icon' width={10} height={10} />
                   </button>
